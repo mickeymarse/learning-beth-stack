@@ -1,14 +1,14 @@
-import { createInsertSchema, createSelectSchema } from 'drizzle-typebox';
-import { text, integer, sqliteTable } from 'drizzle-orm/sqlite-core';
+import { InferSelectModel, InferInsertModel } from 'drizzle-orm';
+import { pgTable, text, serial, boolean } from 'drizzle-orm/pg-core';
 
-export const todos = sqliteTable('todos', {
-  id: integer('id', { mode: 'number' }).primaryKey({ autoIncrement: true }),
+export const todos = pgTable('todos', {
+  id: serial('id').primaryKey(),
   content: text('content').notNull(),
-  completed: integer('completed', { mode: 'boolean' }).notNull().default(false),
+  completed: boolean('completed').notNull().default(false),
 });
 
-export type Todo = typeof todos.$inferSelect;
-export type InsertTodo = typeof todos.$inferInsert;
+type SelectTodo = typeof todos.$inferSelect;
+type InsertTodo = typeof todos.$inferInsert;
 
-export const insertTodoSchema = createInsertSchema(todos);
-export const selectTodoSchema = createSelectSchema(todos);
+type SelectTodo2 = InferSelectModel<typeof todos>;
+type InsertTodo2 = InferInsertModel<typeof todos>;
