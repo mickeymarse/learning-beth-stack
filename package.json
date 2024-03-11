@@ -7,7 +7,7 @@
     "build": "bun build src/index.tsx",
     "start": "NODE_ENV=production bun src/index.tsx",
     "test": "bun test",
-    "db-push": "bunx drizzle-kit push:pg",
+    "db-push": "bunx drizzle-kit push:sqlite",
     "db-studio": "bunx drizzle-kit studio"
   },
   "devDependencies": {
@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@elysiajs/html": "^0.8.0",
-    "@neondatabase/serverless": "^0.9.0",
+    "@libsql/client": "^0.5.5",
     "drizzle-orm": "^0.30.1",
     "elysia": "^0.8.17",
     "figlet": "^1.7.0",
