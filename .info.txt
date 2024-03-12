@@ -1,8 +1,0 @@
-Postgres cluster learning-beth-stack-db created
-  Username:    postgres
-  Password:    KgK1rTkIhwlAQvo
-  Hostname:    learning-beth-stack-db.internal
-  Flycast:     fdaa:8:6644:0:1::2
-  Proxy port:  5432
-  Postgres port:  5433
-  Connection string: postgres://postgres:KgK1rTkIhwlAQvo@learning-beth-stack-db.flycast:5432
