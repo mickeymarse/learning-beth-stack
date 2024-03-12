@@ -1,6 +1,6 @@
 {
   "name": "learning-beth-stack",
-  "module": "index.tsx",
+  "module": "src/index.tsx",
   "type": "module",
   "scripts": {
     "dev": "bun --watch src/index.tsx",
@@ -11,6 +11,7 @@
     "db-studio": "bunx drizzle-kit studio"
   },
   "devDependencies": {
+    "@flydotio/dockerfile": "latest",
     "@types/bun": "latest",
     "@types/figlet": "^1.5.8",
     "@types/pg": "^8.11.2",
